@@ -1,0 +1,95 @@
+* {
+    text-align: start!important;
+}
+
+:root {
+    --main-color: #00897B;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    direction: rtl;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #eee;
+    user-select: none;
+}
+
+header,
+footer {
+    text-align: center!important;
+    background-color: var(--main-color);
+}
+
+main .make-key {
+    user-select: none;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+    transition: .1s all ease-in-out;
+}
+
+main .make-key::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    animation: .2s rotation linear infinite;
+    transform: translate(-50%, -50%) rotateZ(0);
+    background: conic-gradient(#fff 320deg, transparent 320deg);
+    -webkit-mask: radial-gradient(farthest-side, transparent 80%, #fff 80%);
+    mask: radial-gradient(farthest-side, transparent 80%, #fff 80%);
+
+}
+
+main .make-key.disabled {
+    box-shadow: inset 0 0 50px #ffffff56;
+    cursor: auto;
+}
+
+main .make-key.disabled::after {
+    display: block;
+}
+
+main .make-key.disabled:hover,
+main .make-key.disabled:focus {
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+    box-shadow: inset 0 0 50px #ffffff56;
+}
+
+main .make-key:not(.disabled):hover,
+main .make-key:not(.disabled):focus {
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+    box-shadow: inset 0 0 50px #00000043;
+}
+
+main .make-key.disabled span {
+    visibility: hidden;
+}
+
+footer {
+    height: 20px;
+}
+
+@keyframes rotation {
+    from {transform: translate(-50%, -50%) rotateZ(0);}
+    to {transform: translate(-50%, -50%) rotateZ(360deg);}
+}

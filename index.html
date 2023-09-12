@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خوارزمية ديفي هيلمان</title>
+    <link rel="stylesheet" href="stylesheets/libs/normalize.css">
+    <link rel="stylesheet" href="stylesheets/libs/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+<body>
+
+    <header>
+        خوارزمية ديفي هيلمان
+    </header>
+
+    <main>
+        
+        <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>الخاصية</th>
+                <th>القيمة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>الرقم الأولي</td>
+                <td id="prime">-</td>
+              </tr>
+              <tr>
+                <td>الجذر الأولي</td>
+                <td id="group">-</td>
+              </tr>
+              <tr>
+                <td>الرقم الخاص</td>
+                <td id="private-number">-</td>
+              </tr>
+              <tr>
+                <td>المفتاح الخاص</td>
+                <td id="private-key">-</td>
+              </tr>
+              <tr>
+                <td>المفتاح العام</td>
+                <td id="public-key">-</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button class="button-primary make-key">
+            <span>كوّن المفتاح</span>
+          </button>
+        
+    </main>
+
+    <footer></footer>
+
+    
+    <script src="javascripts/libs/BigInteger.min.js"></script>
+    <script src="javascripts/general.js"></script>
+    <script src="javascripts/first.side.js"></script>
+    <script src="javascripts/second.side.js"></script>
+</body>
+</html>
